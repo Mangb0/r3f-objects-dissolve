@@ -1,4 +1,4 @@
-import { OrbitControls } from "@react-three/drei";
+import { ContactShadows, Environment, OrbitControls } from "@react-three/drei";
 
 export const Experience = () => {
   return (
@@ -6,8 +6,10 @@ export const Experience = () => {
       <OrbitControls />
       <mesh>
         <boxGeometry />
-        <meshNormalMaterial />
+        <meshStandardMaterial color="white" />
       </mesh>
+      <Environment preset="sunset" />
+      <ContactShadows position-y={-1} />
     </>
   );
 };
