@@ -1,4 +1,9 @@
 import { ContactShadows, Environment, OrbitControls } from "@react-three/drei";
+import { DissolveMaterial } from "./DissolveMaterial";
+
+import * as THREE from "three";
+
+const boxMaterial = new THREE.MeshStandardMaterial({ color: "white" });
 
 export const Experience = () => {
   return (
@@ -6,7 +11,7 @@ export const Experience = () => {
       <OrbitControls />
       <mesh>
         <boxGeometry />
-        <meshStandardMaterial color="white" />
+        <DissolveMaterial baseMaterial={boxMaterial} />
       </mesh>
       <Environment preset="sunset" />
       <ContactShadows position-y={-1} />
